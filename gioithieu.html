@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới thiệu</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="desktop.css">
+  <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+
+      <!-- Header -->
+      <header>
+        <div class="logo">🛒 Cửa hàng Nhật Tân</div>
+        <nav class="nav-links">
+          <a href="index.html">Trang chủ</a>
+          <a href="gioithieu.html">Giới thiệu</a>
+          <a href="sanpham.html">Sản phẩm</a>
+          <a href="lienhe.html">Liên hệ</a>
+          <a href="giohang.html">Giỏ hàng</a>
+        </nav>
+      </header>
+      
+
+<section class="banner about-banner">
+  <h1>GIỚI THIỆU</h1>
+  <div class="red-line"></div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <p>
+        <div style="max-width: 800px; margin: 0 auto; text-align: justify; padding: 20px; font-size: 24px; line-height: 1.6; color: #333;">
+          
+            <p>Mỗi món ăn tại quán được chế biến từ những nguyên liệu tươi ngon, kết hợp công thức gia truyền để mang đến hương vị thơm ngon, đậm đà và giàu cảm xúc.</p>
+          
+            <p>Ngoài món chính, quán còn phục vụ nhiều món ăn kèm hấp dẫn như chả cốm giòn, chân giò hầm mềm, đậu non béo ngậy, lòng non chế biến tinh tế, tạo nên thực đơn phong phú và hài hòa.</p>
+          
+            <p>Với mức giá hợp lý, phù hợp cho học sinh, sinh viên, gia đình và du khách, quán không chỉ làm hài lòng vị giác mà còn là điểm đến thân thiện cho những ai yêu thích bữa ăn ấm cúng và chất lượng.</p>
+          </div>
+          
+    </p
+  div>
+</section>
+<marquee behavior="scroll" direction="left" scrollamount="5" style="color: black; font-size: 20px; margin-top: 30px;">
+  Cảm ơn quý khách đã ủng hộ và tin tưởng sản phẩm bên cửa hàng
+
+</marquee>
+<canvas id="fallingFlowers"></canvas>
+<script>
+  const canvas = document.getElementById('fallingFlowers');
+  const ctx = canvas.getContext('2d');
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+  canvas.width = width;
+  canvas.height = height;
+  
+  const flowers = [];
+  
+  for (let i = 0; i < 50; i++) {
+    flowers.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      r: Math.random() * 4 + 2,
+      d: Math.random() + 1,
+      color: `rgba(255, 182, 193, ${Math.random()})` // màu hồng nhạt
+    });
+  }
+  
+  function drawFlowers() {
+    ctx.clearRect(0, 0, width, height);
+    ctx.beginPath();
+    flowers.forEach(flower => {
+      ctx.moveTo(flower.x, flower.y);
+      ctx.arc(flower.x, flower.y, flower.r, 0, Math.PI * 2, true);
+    });
+    ctx.fillStyle = "pink";
+    ctx.fill();
+    moveFlowers();
+  }
+  
+  function moveFlowers() {
+    flowers.forEach(flower => {
+      flower.y += Math.pow(flower.d, 2) + 1;
+      flower.x += Math.sin(flower.y * 0.01);
+  
+      if (flower.y > height) {
+        flower.y = 0;
+        flower.x = Math.random() * width;
+      }
+    });
+  }
+  
+  setInterval(drawFlowers, 25);
+  
+  window.addEventListener('resize', () => {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
+  });
+  </script>    
+
+</body>
+</html>

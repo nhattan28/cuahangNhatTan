@@ -1,0 +1,15 @@
+/* Áp dụng cho màn hình lớn (PC, laptop) */
+@media (min-width: 768px) {
+    nav a {
+      font-size: 18px;
+    }
+  
+    .banner h1 {
+      font-size: 36px;
+    }
+  
+    .product-grid > div {
+      flex: 1 1 calc(25% - 20px); /* 4 cột */
+    }
+  }
+  

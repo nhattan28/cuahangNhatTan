@@ -1,0 +1,67 @@
+/* Áp dụng cho màn hình nhỏ (Mobile) */
+@media (max-width: 767px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav a {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+  
+    .banner h1 {
+      font-size: 24px;
+    }
+  
+    .product-grid {
+      flex-direction: column;
+    }
+  
+    .product-grid > div {
+      flex: 1 1 100%; /* 1 cột full */
+    }
+  }
+  
+  /* ========== Responsive cho Mobile ========== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .contact-section h1 {
+    font-size: 26px;
+  }
+
+  .contact-info {
+    font-size: 16px;
+  }
+
+  form#contactForm input,
+  form#contactForm textarea {
+    width: 100%;
+  }
+
+  form#contactForm button {
+    width: 100%;
+  }
+
+  marquee {
+    font-size: 18px;
+  }
+}
+

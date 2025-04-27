@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đồ uống - Cửa hàng Nhật Tân</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="desktop.css">
+  <link rel="stylesheet" href="mobile.css">
+  <style>
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">🛒 Cửa hàng Nhật Tân</div>
+    <nav class="nav-links">
+      <a href="index.html">Trang chủ</a>
+      <a href="gioithieu.html">Giới thiệu</a>
+      <a href="sanpham.html">Sản phẩm</a>
+      <a href="lienhe.html">Liên hệ</a>
+      <a href="giohang.html">Giỏ hàng</a>
+    </nav>
+  </header>    
+
+
+  <!-- Tiêu đề -->
+  <section class="banner">
+    <h1>ĐỒ UỐNG</h1>
+    <div class="red-line"></div>
+  </section>
+
+  <!-- Danh sách sản phẩm đồ uống -->
+  <section class="products">
+    <div class="product-grid">
+
+      <!-- Sản phẩm 1 -->
+      <div class="product-item">
+        <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/469617433_1260098525197309_2067743646459810517_n.jpg?stp=c256.0.1536.1536a_dst-jpg_s206x206_tt6&_nc_cat=108&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeEebjZK5aJM033kF48ya9ybE2ZbrooRVUETZluuihFVQWsRiIEEXNk0z2c59PzTT_Rcu2klb-l6R8d7m_NPoLYP&_nc_ohc=mhZxWuJG8v0Q7kNvwHWVuo0&_nc_oc=AdmOSWUiEOu_1asiVLnL3kUEQU69LmgiYINrFoBdrCMVf72SShntGubw24HegqvwTvrCqZbyBFopY2sdzJUYeFN5&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=Hyas7m5V48hCLSiXV68A7Q&oh=00_AfHrFpFWsl7b2QilNnzA0GfitveOKxBKqWJ2OHjQDnQNmA&oe=68132EF1" alt="Trà xanh đóng chai">
+        <div class="product-info">
+          <h3>Rượu nếp</h3>
+          <p>90,000đ / chai</p>
+          <div class="quantity-control">
+            <button onclick="changeQuantity(this, -1)">-</button>
+            <span>1</span>
+            <button onclick="changeQuantity(this, 1)">+</button>
+          </div>
+          <button class="add-to-cart" onclick="addToCart('Rượu nếp', 90000, this)">Thêm vào giỏ</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+ <marquee behavior="scroll" direction="left" scrollamount="5" style="color: black; font-size: 20px; margin-top: 30px;">
+   Cảm ơn quý khách đã ủng hộ và tin tưởng sản phẩm bên cửa hàng
+ </marquee>
+  <!-- Javascript -->
+  <script>
+    function changeQuantity(button, delta) {
+      const span = button.parentElement.querySelector('span');
+      let quantity = parseInt(span.innerText);
+      quantity = Math.max(1, quantity + delta);
+      span.innerText = quantity;
+    }
+
+    function addToCart(name, price, button) {
+      const quantity = parseInt(button.parentElement.querySelector('.quantity-control span').innerText);
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      const index = cart.findIndex(item => item.name === name);
+      if (index !== -1) {
+        cart[index].quantity += quantity;
+      } else {
+        cart.push({ name, price, quantity });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`🛒 Đã thêm ${quantity} x ${name} vào giỏ hàng!`);
+    }
+  </script>
+  </marquee>
+  <canvas id="fallingFlowers"></canvas>
+  <script>
+    const canvas = document.getElementById('fallingFlowers');
+    const ctx = canvas.getContext('2d');
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
+    
+    const flowers = [];
+    
+    for (let i = 0; i < 50; i++) {
+      flowers.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: Math.random() * 4 + 2,
+        d: Math.random() + 1,
+        color: `rgba(255, 182, 193, ${Math.random()})` // màu hồng nhạt
+      });
+    }
+    
+    function drawFlowers() {
+      ctx.clearRect(0, 0, width, height);
+      ctx.beginPath();
+      flowers.forEach(flower => {
+        ctx.moveTo(flower.x, flower.y);
+        ctx.arc(flower.x, flower.y, flower.r, 0, Math.PI * 2, true);
+      });
+      ctx.fillStyle = "pink";
+      ctx.fill();
+      moveFlowers();
+    }
+    
+    function moveFlowers() {
+      flowers.forEach(flower => {
+        flower.y += Math.pow(flower.d, 2) + 1;
+        flower.x += Math.sin(flower.y * 0.01);
+    
+        if (flower.y > height) {
+          flower.y = 0;
+          flower.x = Math.random() * width;
+        }
+      });
+    }
+    
+    setInterval(drawFlowers, 25);
+    
+    window.addEventListener('resize', () => {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+    });
+    </script>    
+</body>
+</html>
