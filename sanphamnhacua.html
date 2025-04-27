@@ -2,76 +2,70 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sản phẩm nhà làm - Cửa hàng Nhật Tân</title>
   <link rel="stylesheet" href="common.css">
-  <link rel="stylesheet" href="desktop.css">
-  <link rel="stylesheet" href="mobile.css">
   <style>
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="logo">🛒 Cửa hàng Nhật Tân</div>
-    <nav class="nav-links">
-      <a href="index.html">Trang chủ</a>
-      <a href="gioithieu.html">Giới thiệu</a>
-      <a href="sanpham.html">Sản phẩm</a>
-      <a href="lienhe.html">Liên hệ</a>
-      <a href="giohang.html">Giỏ hàng</a>
-    </nav>
-  </header>    
 
+<header>
+  <div class="logo">🛒 Cửa hàng Nhật Tân</div>
+  <nav class="nav-links">
+    <a href="index.html">Trang chủ</a>
+    <a href="gioithieu.html">Giới thiệu</a>
+    <a href="sanpham.html">Sản phẩm</a>
+    <a href="lienhe.html">Liên hệ</a>
+    <a href="giohang.html">Giỏ hàng</a>
+  </nav>
+</header>
 
-  <!-- Tiêu đề -->
-  <section class="banner">
-    <h1>SẢN PHẨM NHÀ LÀM</h1>
-    <div class="red-line"></div>
-  </section>
+<section class="banner">
+  <h1>SẢN PHẨM NHÀ LÀM</h1>
+  <div class="red-line"></div>
+</section>
 
-  <!-- Danh sách sản phẩm nhà làm -->
-  <section class="products">
-    <div class="product-grid">
+<section class="products">
+  <div class="product-grid">
 
-      <!-- Sản phẩm 1 -->
-      <div class="product-item">
-        <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/467191939_1247059326501229_719375567782404109_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGjkXYj_7RMG6H-72eGdIDcYomyCxLVdHdiibILEtV0d9giakq7DkF45AuXIrHRAJjyd5kspSoqW6vNhFTlSc_a&_nc_ohc=H6ZX1rQgl4oQ7kNvwFQ9uYl&_nc_oc=Adm_a-UdVYRtzhAAdTqHiLaDdkMcr3GyIDNKKagN0pLZL0SU7fFyKMQS0mYszQN0enbSI0ZhvO0tlMB_yrPSwJWB&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=e-g6qPakS6QptU3m2hLvSA&oh=00_AfGTrDCRd2Fqc6WfltSX0VrArMjiYCppUQPswCFwv1gBiA&oe=68133F8F" class="product-image">
-        <div class="product-info">
-          <h3>Chè</h3>
-          <p>10,000đ / ly</p>
-          <div class="quantity-control">
-            <button onclick="changeQuantity(this, -1)">-</button>
-            <span>1</span>
-            <button onclick="changeQuantity(this, 1)">+</button>
-          </div>
-          <button class="add-to-cart" onclick="addToCart('Chè', 10000, this)">Thêm vào giỏ</button>
+    <!-- Sản phẩm 1 -->
+    <div class="product-item">
+      <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/467191939_1247059326501229_719375567782404109_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGjkXYj_7RMG6H-72eGdIDcYomyCxLVdHdiibILEtV0d9giakq7DkF45AuXIrHRAJjyd5kspSoqW6vNhFTlSc_a&_nc_ohc=H6ZX1rQgl4oQ7kNvwFQ9uYl&_nc_oc=Adm_a-UdVYRtzhAAdTqHiLaDdkMcr3GyIDNKKagN0pLZL0SU7fFyKMQS0mYszQN0enbSI0ZhvO0tlMB_yrPSwJWB&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=e-g6qPakS6QptU3m2hLvSA&oh=00_AfGTrDCRd2Fqc6WfltSX0VrArMjiYCppUQPswCFwv1gBiA&oe=68133F8F" alt="Chè">
+      <div class="product-info">
+        <h3>Chè</h3>
+        <p>10,000đ / ly</p>
+        <div class="quantity-control">
+          <button onclick="changeQuantity(this, -1)">-</button>
+          <span>1</span>
+          <button onclick="changeQuantity(this, 1)">+</button>
         </div>
+        <button class="add-to-cart" onclick="addToCart('Chè', 10000, this)">Thêm vào giỏ</button>
       </div>
-
-      <!-- Sản phẩm 2 -->
-      <div class="product-item">
-        <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/466948075_1246438763229952_5406580855825510303_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHwt_ET6umCL6goj0hhqO6ARzCjb5vI6QhHMKNvm8jpCJ7XDba7wXjQpRgEGCbHAn2hZFjVnwpM47yfJU0QWpHb&_nc_ohc=MIYoWnLCiD4Q7kNvwF3mr5x&_nc_oc=AdlnKBdMvcnruFcrVHmdW9AsiJ3u7smfvo_KdRBxDDJxWSYC_0nbAqEORMwkcaIYacNBslBKlIPYTHIa3xyOwSMW&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=tTiMtV9g5J0Wh4EYVN86eQ&oh=00_AfFGUyGpCch8nTWbSf5XqpZFVWxakGS766U6DHsvhNeaTw&oe=68132B53" class="product-image">
-        <div class="product-info">
-          <h3>Măng chua</h3>
-          <p>50,000đ / hủ</p>
-          <div class="quantity-control">
-            <button onclick="changeQuantity(this, -1)">-</button>
-            <span>1</span>
-            <button onclick="changeQuantity(this, 1)">+</button>
-          </div>
-          <button class="add-to-cart" onclick="addToCart('Măng chua', 50000, this)">Thêm vào giỏ</button>
-        </div>
-      </div>
-
     </div>
-  </section>
 
-  <!-- Footer -->
-  <marquee behavior="scroll" direction="left" scrollamount="5" style="color: black; font-size: 20px; margin-top: 30px;">
-    Cảm ơn quý khách đã ủng hộ và tin tưởng sản phẩm bên cửa hàng
-  </marquee>
-  <!-- Javascript -->
+    <!-- Sản phẩm 2 -->
+    <div class="product-item">
+      <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/466948075_1246438763229952_5406580855825510303_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHwt_ET6umCL6goj0hhqO6ARzCjb5vI6QhHMKNvm8jpCJ7XDba7wXjQpRgEGCbHAn2hZFjVnwpM47yfJU0QWpHb&_nc_ohc=MIYoWnLCiD4Q7kNvwF3mr5x&_nc_oc=AdlnKBdMvcnruFcrVHmdW9AsiJ3u7smfvo_KdRBxDDJxWSYC_0nbAqEORMwkcaIYacNBslBKlIPYTHIa3xyOwSMW&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=tTiMtV9g5J0Wh4EYVN86eQ&oh=00_AfFGUyGpCch8nTWbSf5XqpZFVWxakGS766U6DHsvhNeaTw&oe=68132B53" alt="Măng chua">
+      <div class="product-info">
+        <h3>Măng chua</h3>
+        <p>50,000đ / hủ</p>
+        <div class="quantity-control">
+          <button onclick="changeQuantity(this, -1)">-</button>
+          <span>1</span>
+          <button onclick="changeQuantity(this, 1)">+</button>
+        </div>
+        <button class="add-to-cart" onclick="addToCart('Măng chua', 50000, this)">Thêm vào giỏ</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+<marquee behavior="scroll" direction="left" scrollamount="5" style="color: black; font-size: 20px; margin-top: 30px;">
+  Cảm ơn quý khách đã ủng hộ và tin tưởng sản phẩm bên cửa hàng
 </marquee>
+<!-- Hoa rơi -->
 <canvas id="fallingFlowers"></canvas>
 <script>
   function changeQuantity(button, delta) {
@@ -92,29 +86,25 @@
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`🛒 Đã thêm ${quantity} x ${name} vào giỏ hàng!`);
   }
-</script>
-</marquee>
-<canvas id="fallingFlowers"></canvas>
-<script>
+
   const canvas = document.getElementById('fallingFlowers');
   const ctx = canvas.getContext('2d');
   let width = window.innerWidth;
   let height = window.innerHeight;
   canvas.width = width;
   canvas.height = height;
-  
+
   const flowers = [];
-  
   for (let i = 0; i < 50; i++) {
     flowers.push({
       x: Math.random() * width,
       y: Math.random() * height,
       r: Math.random() * 4 + 2,
       d: Math.random() + 1,
-      color: `rgba(255, 182, 193, ${Math.random()})` // màu hồng nhạt
+      color: `rgba(255, 182, 193, ${Math.random()})`
     });
   }
-  
+
   function drawFlowers() {
     ctx.clearRect(0, 0, width, height);
     ctx.beginPath();
@@ -126,27 +116,27 @@
     ctx.fill();
     moveFlowers();
   }
-  
+
   function moveFlowers() {
     flowers.forEach(flower => {
       flower.y += Math.pow(flower.d, 2) + 1;
       flower.x += Math.sin(flower.y * 0.01);
-  
       if (flower.y > height) {
         flower.y = 0;
         flower.x = Math.random() * width;
       }
     });
   }
-  
+
   setInterval(drawFlowers, 25);
-  
+
   window.addEventListener('resize', () => {
     width = window.innerWidth;
     height = window.innerHeight;
     canvas.width = width;
     canvas.height = height;
   });
-  </script>    
+</script>
+
 </body>
 </html>
