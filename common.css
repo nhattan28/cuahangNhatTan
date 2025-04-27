@@ -447,3 +447,10 @@ marquee {
     width: 90%;
   }
 }
+/* Căn chỉnh ảnh*/
+.product-image {
+  width: 150px; /* Hoặc auto theo khung */
+  height: 200px; /* Giữ tỉ lệ */
+  display: block;
+  margin: 0 auto; /* Căn giữa ảnh */
+}
