@@ -2,13 +2,11 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bánh tráng - Cửa hàng Nhật Tân</title>
   <link rel="stylesheet" href="common.css">
   <link rel="stylesheet" href="desktop.css">
   <link rel="stylesheet" href="mobile.css">
-  <style>
-  </style>
 </head>
 <body>
 
@@ -24,7 +22,7 @@
     </nav>
   </header>    
 
-  <!-- Tiêu đề -->
+  <!-- Banner -->
   <section class="banner">
     <h1>BÁNH TRÁNG</h1>
     <div class="red-line"></div>
@@ -32,61 +30,56 @@
 
   <!-- Danh sách sản phẩm -->
   <section class="products">
-    <div class="product-grid">
-
-      <!-- Sản phẩm 1 -->
-      <div class="product-item">
-        <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/469334737_1260737285133433_8341340149754309978_n.jpg?stp=c0.364.944.944a_dst-jpg_s206x206_tt6&_nc_cat=100&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeF2BLCAmF0k31h7ROZ6QZt2BxjI6-aQ9w4HGMjr5pD3Dr7xPWNX7IvsDTo3YGXDVKU9mKDtA3QHX4_q9U9WcEtc&_nc_ohc=5YpuJmrzedcQ7kNvwFRuik3&_nc_oc=AdlLeX8c9_m2AAq1YS8SW6FxvSPFWucP3h6fHbTckA2bpyqIs1pGL03LCg7QtiYRlPd9IU2WR6wXvgyPrkJAuJ84&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=Oo0he7eVD-tvJdf2uGSg8w&oh=00_AfHgpXL0q7JXfpn6vaOhb9xGzKbihx34KMW9PvMHnu8MBw&oe=6813438D" class="product-image">
-        <div class="product-info">
-          <h3>Bánh tráng nước dừa</h3>
-          <p>30,000đ / 10 cái</p>
-          <div class="quantity-control">
-            <button onclick="changeQuantity(this, -1)">-</button>
-            <span>1</span>
-            <button onclick="changeQuantity(this, 1)">+</button>
-          </div>
-          <button class="add-to-cart" onclick="addToCart('Bánh tráng nước dừa', 30000, this)">Thêm vào giỏ</button>
+    <div class="product-item">
+      <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/469334737_1260737285133433_8341340149754309978_n.jpg?stp=c0.364.944.944a_dst-jpg_s206x206_tt6&_nc_cat=100&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeF2BLCAmF0k31h7ROZ6QZt2BxjI6-aQ9w4HGMjr5pD3Dr7xPWNX7IvsDTo3YGXDVKU9mKDtA3QHX4_q9U9WcEtc&_nc_ohc=5YpuJmrzedcQ7kNvwFRuik3&_nc_oc=AdlLeX8c9_m2AAq1YS8SW6FxvSPFWucP3h6fHbTckA2bpyqIs1pGL03LCg7QtiYRlPd9IU2WR6wXvgyPrkJAuJ84&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=Oo0he7eVD-tvJdf2uGSg8w&oh=00_AfHgpXL0q7JXfpn6vaOhb9xGzKbihx34KMW9PvMHnu8MBw&oe=6813438D" class="product-image">
+      <div class="product-info">
+        <h3>Bánh tráng nước dừa</h3>
+        <p>30.000đ / 10 cái</p>
+        <div class="quantity-control">
+          <button onclick="changeQuantity(this, -1)">-</button>
+          <span>1</span>
+          <button onclick="changeQuantity(this, 1)">+</button>
         </div>
+        <button class="add-to-cart" onclick="addToCart('Bánh tráng nước dừa', 30000, this)">Thêm vào giỏ</button>
       </div>
-
-      <!-- Sản phẩm 2 -->
-      <div class="product-item">
-        <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/469805717_1262360088304486_2539124556398626902_n.jpg?stp=c552.0.945.945a_dst-jpg_s206x206_tt6&_nc_cat=111&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeHBbFNm9wSiBmOOmT7qf-7Gpwg4R5MdW1enCDhHkx1bV8MpFWR38GoMgiNxEX2e9CmxhreNXjUoiPGFhlkLKj21&_nc_ohc=mZ77SE0ZyK8Q7kNvwHRwFh2&_nc_oc=Adm1jUJJXVRZXc743tWNmf2hw-64X9XOho5dVJt9i4Vn8owndaAyJwneXwUbdfLGf2hx_RqKMAAaZKs2ESBYYedP&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=4pRltfnTsc9xMGkf7xmylQ&oh=00_AfHJp5xef_2TBJjJMdHz1l565GqQJKZ7TrLzWn_3aKPeXw&oe=681341D4" class="product-image">
-        <div class="product-info">
-          <h3>Bánh tráng gạo</h3>
-          <p>30,000đ / ràng</p>
-          <div class="quantity-control">
-            <button onclick="changeQuantity(this, -1)">-</button>
-            <span>1</span>
-            <button onclick="changeQuantity(this, 1)">+</button>
-          </div>
-          <button class="add-to-cart" onclick="addToCart('Bánh tráng gạo', 30000, this)">Thêm vào giỏ</button>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 3 -->
-      <div class="product-item">
-        <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/469613705_1261781171695711_8039514084632344919_n.jpg?stp=c0.364.944.944a_dst-jpg_s206x206_tt6&_nc_cat=105&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeG-VxwEiq4ELF8NYU4cwIy0T5Uj8sYGAKdPlSPyxgYAp4b_NGzEjHIcxAK-LonFl60U7W8rEsZKE0XPu8rEiXHe&_nc_ohc=THtTCMCkZFkQ7kNvwFoSE3b&_nc_oc=AdnnweOwPKQxS21v1-ofLOEMu98HKKp6I6EWDXR1SGUgK3XY9P0RuSul5Xz7Le4EFjNuCAVuaKFl4FZiLC8AyfGE&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=HcnF8wYz_MJAX2-naNUGWA&oh=00_AfEDN6knh8cxsOATgL_-jl3Qvv0xMFOZUIpZ2SxdOH4hRQ&oe=681330E4" class="product-image">
-        <div class="product-info">
-          <h3>Bánh tráng nhúng</h3>
-          <p>30,000đ / ràng</p>
-          <div class="quantity-control">
-            <button onclick="changeQuantity(this, -1)">-</button>
-            <span>1</span>
-            <button onclick="changeQuantity(this, 1)">+</button>
-          </div>
-          <button class="add-to-cart" onclick="addToCart('Bánh tráng nhúng', 30000, this)">Thêm vào giỏ</button>
-        </div>
-      </div>
-
     </div>
+
+    <div class="product-item">
+      <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/469805717_1262360088304486_2539124556398626902_n.jpg?stp=c552.0.945.945a_dst-jpg_s206x206_tt6&_nc_cat=111&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeHBbFNm9wSiBmOOmT7qf-7Gpwg4R5MdW1enCDhHkx1bV8MpFWR38GoMgiNxEX2e9CmxhreNXjUoiPGFhlkLKj21&_nc_ohc=mZ77SE0ZyK8Q7kNvwHRwFh2&_nc_oc=Adm1jUJJXVRZXc743tWNmf2hw-64X9XOho5dVJt9i4Vn8owndaAyJwneXwUbdfLGf2hx_RqKMAAaZKs2ESBYYedP&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=4pRltfnTsc9xMGkf7xmylQ&oh=00_AfHJp5xef_2TBJjJMdHz1l565GqQJKZ7TrLzWn_3aKPeXw&oe=681341D4" class="product-image">
+      <div class="product-info">
+        <h3>Bánh tráng gạo</h3>
+        <p>30.000đ / ràng</p>
+        <div class="quantity-control">
+          <button onclick="changeQuantity(this, -1)">-</button>
+          <span>1</span>
+          <button onclick="changeQuantity(this, 1)">+</button>
+        </div>
+        <button class="add-to-cart" onclick="addToCart('Bánh tráng gạo', 30000, this)">Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/469613705_1261781171695711_8039514084632344919_n.jpg?stp=c0.364.944.944a_dst-jpg_s206x206_tt6&_nc_cat=105&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeG-VxwEiq4ELF8NYU4cwIy0T5Uj8sYGAKdPlSPyxgYAp4b_NGzEjHIcxAK-LonFl60U7W8rEsZKE0XPu8rEiXHe&_nc_ohc=THtTCMCkZFkQ7kNvwFoSE3b&_nc_oc=AdnnweOwPKQxS21v1-ofLOEMu98HKKp6I6EWDXR1SGUgK3XY9P0RuSul5Xz7Le4EFjNuCAVuaKFl4FZiLC8AyfGE&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=HcnF8wYz_MJAX2-naNUGWA&oh=00_AfEDN6knh8cxsOATgL_-jl3Qvv0xMFOZUIpZ2SxdOH4hRQ&oe=681330E4" class="product-image">
+      <div class="product-info">
+        <h3>Bánh tráng nhúng</h3>
+        <p>30.000đ / ràng</p>
+        <div class="quantity-control">
+          <button onclick="changeQuantity(this, -1)">-</button>
+          <span>1</span>
+          <button onclick="changeQuantity(this, 1)">+</button>
+        </div>
+        <button class="add-to-cart" onclick="addToCart('Bánh tráng nhúng', 30000, this)">Thêm vào giỏ</button>
+      </div>
+    </div>
+
   </section>
 
   <!-- Footer -->
   <marquee behavior="scroll" direction="left" scrollamount="5" style="color: black; font-size: 20px; margin-top: 30px;">
     Cảm ơn quý khách đã ủng hộ và tin tưởng sản phẩm bên cửa hàng
   </marquee>
-  <!-- Javascript -->
+
+  <!-- JavaScript -->
   <script>
     function changeQuantity(button, delta) {
       const span = button.parentElement.querySelector('span');
@@ -99,7 +92,6 @@
       const quantity = parseInt(button.parentElement.querySelector('.quantity-control span').innerText);
       let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-      // Kiểm tra sản phẩm đã có trong giỏ chưa
       const index = cart.findIndex(item => item.name === name);
       if (index !== -1) {
         cart[index].quantity += quantity;
@@ -111,60 +103,60 @@
       alert(`🛒 Đã thêm ${quantity} x ${name} vào giỏ hàng!`);
     }
   </script>
-</marquee>
-<canvas id="fallingFlowers"></canvas>
-<script>
-  const canvas = document.getElementById('fallingFlowers');
-  const ctx = canvas.getContext('2d');
-  let width = window.innerWidth;
-  let height = window.innerHeight;
-  canvas.width = width;
-  canvas.height = height;
-  
-  const flowers = [];
-  
-  for (let i = 0; i < 50; i++) {
-    flowers.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      r: Math.random() * 4 + 2,
-      d: Math.random() + 1,
-      color: `rgba(255, 182, 193, ${Math.random()})` // màu hồng nhạt
-    });
-  }
-  
-  function drawFlowers() {
-    ctx.clearRect(0, 0, width, height);
-    ctx.beginPath();
-    flowers.forEach(flower => {
-      ctx.moveTo(flower.x, flower.y);
-      ctx.arc(flower.x, flower.y, flower.r, 0, Math.PI * 2, true);
-    });
-    ctx.fillStyle = "pink";
-    ctx.fill();
-    moveFlowers();
-  }
-  
-  function moveFlowers() {
-    flowers.forEach(flower => {
-      flower.y += Math.pow(flower.d, 2) + 1;
-      flower.x += Math.sin(flower.y * 0.01);
-  
-      if (flower.y > height) {
-        flower.y = 0;
-        flower.x = Math.random() * width;
-      }
-    });
-  }
-  
-  setInterval(drawFlowers, 25);
-  
-  window.addEventListener('resize', () => {
-    width = window.innerWidth;
-    height = window.innerHeight;
+
+  <!-- Hoa rơi -->
+  <canvas id="fallingFlowers"></canvas>
+  <script>
+    const canvas = document.getElementById('fallingFlowers');
+    const ctx = canvas.getContext('2d');
+    let width = window.innerWidth;
+    let height = window.innerHeight;
     canvas.width = width;
     canvas.height = height;
-  });
-  </script>    
+    
+    const flowers = [];
+    for (let i = 0; i < 50; i++) {
+      flowers.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: Math.random() * 4 + 2,
+        d: Math.random() + 1,
+        color: `rgba(255, 182, 193, ${Math.random()})`
+      });
+    }
+    
+    function drawFlowers() {
+      ctx.clearRect(0, 0, width, height);
+      ctx.beginPath();
+      flowers.forEach(flower => {
+        ctx.moveTo(flower.x, flower.y);
+        ctx.arc(flower.x, flower.y, flower.r, 0, Math.PI * 2, true);
+      });
+      ctx.fillStyle = "pink";
+      ctx.fill();
+      moveFlowers();
+    }
+    
+    function moveFlowers() {
+      flowers.forEach(flower => {
+        flower.y += Math.pow(flower.d, 2) + 1;
+        flower.x += Math.sin(flower.y * 0.01);
+        if (flower.y > height) {
+          flower.y = 0;
+          flower.x = Math.random() * width;
+        }
+      });
+    }
+    
+    setInterval(drawFlowers, 25);
+    
+    window.addEventListener('resize', () => {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+    });
+  </script>
+
 </body>
 </html>
