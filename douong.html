@@ -2,13 +2,11 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Đồ uống - Cửa hàng Nhật Tân</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đồ Uống - Cửa hàng Nhật Tân</title>
   <link rel="stylesheet" href="common.css">
   <link rel="stylesheet" href="desktop.css">
   <link rel="stylesheet" href="mobile.css">
-  <style>
-  </style>
 </head>
 <body>
 
@@ -24,40 +22,36 @@
     </nav>
   </header>    
 
-
-  <!-- Tiêu đề -->
+  <!-- Banner -->
   <section class="banner">
     <h1>ĐỒ UỐNG</h1>
     <div class="red-line"></div>
   </section>
 
-  <!-- Danh sách sản phẩm đồ uống -->
+  <!-- Danh sách sản phẩm -->
   <section class="products">
-    <div class="product-grid">
-
-      <!-- Sản phẩm 1 -->
-      <div class="product-item">
-        <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/469617433_1260098525197309_2067743646459810517_n.jpg?stp=c256.0.1536.1536a_dst-jpg_s206x206_tt6&_nc_cat=108&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeEebjZK5aJM033kF48ya9ybE2ZbrooRVUETZluuihFVQWsRiIEEXNk0z2c59PzTT_Rcu2klb-l6R8d7m_NPoLYP&_nc_ohc=mhZxWuJG8v0Q7kNvwHWVuo0&_nc_oc=AdmOSWUiEOu_1asiVLnL3kUEQU69LmgiYINrFoBdrCMVf72SShntGubw24HegqvwTvrCqZbyBFopY2sdzJUYeFN5&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=Hyas7m5V48hCLSiXV68A7Q&oh=00_AfHrFpFWsl7b2QilNnzA0GfitveOKxBKqWJ2OHjQDnQNmA&oe=68132EF1" class="product-image">
-        <div class="product-info">
-          <h3>Rượu nếp</h3>
-          <p>90,000đ / chai</p>
-          <div class="quantity-control">
-            <button onclick="changeQuantity(this, -1)">-</button>
-            <span>1</span>
-            <button onclick="changeQuantity(this, 1)">+</button>
-          </div>
-          <button class="add-to-cart" onclick="addToCart('Rượu nếp', 90000, this)">Thêm vào giỏ</button>
+    <div class="product-item">
+      <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/468388748_1252638132610015_7224020324921005435_n.jpg?stp=c0.119.1080.1080a_dst-jpg_s206x206_tt6&_nc_cat=105&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeFEs-sBA_KlbOnwi2uk-RZNbcWkfaC8RvdtxaR9oLxG9xVlp6ur9dYSuZNboyTQ6XwQgViyxKIGBiX_M1mDJz86&_nc_ohc=7r9ci3UKfxEQ7kNvwHSQECp&_nc_oc=AdlNAOi-KlrFbxX0H3pWyAG9QFCZ7jkcnPH001uKdU7AbFRew3UF6EMG8UpMFnMsSJ8Y-SskLOxrCoe31UpNEYk5&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=qfnPztYiLeRfsq_7rQeNSg&oh=00_AfFeEcIrQSM4eU6ywy3LDNj_4FDp_EeP_aHIsDv0aVUWIA&oe=6813CD1B" class="product-image">
+      <div class="product-info">
+        <h3>Rượu nếp</h3>
+        <p>90.000đ / ly</p>
+        <div class="quantity-control">
+          <button onclick="changeQuantity(this, -1)">-</button>
+          <span>1</span>
+          <button onclick="changeQuantity(this, 1)">+</button>
         </div>
+        <button class="add-to-cart" onclick="addToCart('Rượu nếp', 90000, this)">Thêm vào giỏ</button>
       </div>
-
     </div>
+
   </section>
 
   <!-- Footer -->
- <marquee behavior="scroll" direction="left" scrollamount="5" style="color: black; font-size: 20px; margin-top: 30px;">
-   Cảm ơn quý khách đã ủng hộ và tin tưởng sản phẩm bên cửa hàng
- </marquee>
-  <!-- Javascript -->
+  <marquee behavior="scroll" direction="left" scrollamount="5" style="color: black; font-size: 20px; margin-top: 30px;">
+    Cảm ơn quý khách đã ủng hộ và tin tưởng sản phẩm bên cửa hàng
+  </marquee>
+
+  <!-- JavaScript -->
   <script>
     function changeQuantity(button, delta) {
       const span = button.parentElement.querySelector('span');
@@ -81,7 +75,8 @@
       alert(`🛒 Đã thêm ${quantity} x ${name} vào giỏ hàng!`);
     }
   </script>
-  </marquee>
+
+  <!-- Hoa rơi -->
   <canvas id="fallingFlowers"></canvas>
   <script>
     const canvas = document.getElementById('fallingFlowers');
@@ -92,14 +87,13 @@
     canvas.height = height;
     
     const flowers = [];
-    
     for (let i = 0; i < 50; i++) {
       flowers.push({
         x: Math.random() * width,
         y: Math.random() * height,
         r: Math.random() * 4 + 2,
         d: Math.random() + 1,
-        color: `rgba(255, 182, 193, ${Math.random()})` // màu hồng nhạt
+        color: `rgba(255, 182, 193, ${Math.random()})`
       });
     }
     
@@ -119,7 +113,6 @@
       flowers.forEach(flower => {
         flower.y += Math.pow(flower.d, 2) + 1;
         flower.x += Math.sin(flower.y * 0.01);
-    
         if (flower.y > height) {
           flower.y = 0;
           flower.x = Math.random() * width;
@@ -135,6 +128,7 @@
       canvas.width = width;
       canvas.height = height;
     });
-    </script>    
+  </script>
+
 </body>
 </html>
